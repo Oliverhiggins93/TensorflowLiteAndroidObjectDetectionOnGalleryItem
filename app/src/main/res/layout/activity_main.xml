@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <org.tensorflow.lite.examples.detection.customview.OverlayView
+        android:layout_width="match_parent"
+        android:id="@+id/tracking_overlay"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_alignTop="@+id/imgview"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/imgview"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:id="@+id/buttonGallery"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonGallery"
+        android:text="Crop"
+        android:id="@+id/buttonCrop"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCrop"
+        android:text="Inference"
+        android:id="@+id/buttonInference"/>
+
+</RelativeLayout>
